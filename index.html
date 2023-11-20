@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <label class="main-container">
+        <h1>Password Generator</h1>
+        <hr>
+        <div class="input-box">
+            <input type="text" id="input-text-box" disabled>
+            <span><i class="fa-regular fa-copy"></i></span>
+        </div>
+        <div class="password-strength-bar" id="medium"></div>
+        <div class="input-password-box">
+            <label for="password-range">Password Length</label>
+            <span>15</span>
+        </div>
+        <input type="range" id="password-range" class="password-range" min="5" max="25">
+        <p class="password-setting">Password Settings</p>
+        <div class="checkbox-main">
+            <div class="checkbox">
+                <input type="checkbox" id="lower" class="lower-case" checked>
+                <label>Lowercase (a-z)</label><br>
+                <input type="checkbox" id="number">
+                <label for="number">Numbers (0-9)</label><br>
+                <input type="checkbox" id="duplicates">
+                <label for="duplicates">Exclude Duplicate</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="upper">
+                <label for="upper">Uppercase (A-Z)</label><br>
+                <input type="checkbox" id="symbol">
+                <label for="symbol">Symbols (!@#$)</label><br>
+                <input type="checkbox" id="spaces">
+                <label for="spaces">Include Spaces</label>
+            </div>
+        </div>
+        <button class="generate-password" id="generate-password">GENERATE PASSWORD</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    background-color: rgb(81, 135, 244);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+.main-container{
+    width: 32%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 5px;
+    min-height: 60vh;
+}
+
+.main-container h1{
+    font-weight: bold;
+    padding: 0.35em;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+}
+
+.input-box input{
+    width: 90%;
+    height: 45px;
+    display: block;
+    margin: 25px auto;
+    padding-left: 10px;
+    font-size: 1rem;
+}
+
+.input-box span{
+    position: absolute;
+    right: 9%;
+    bottom: 30%;
+    color: grey;
+    width: 3%;
+    cursor: pointer;
+}
+
+.fa-circle-check{
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 20%;
+}
+
+.lower-case{
+    pointer-events: none;
+}
+
+hr{
+    background-color: rgb(203, 203, 192,0.7);
+    height: 2px;
+    border: none;
+}
+
+.password-strength-bar{
+    position: relative;
+    width: 90%;
+    height: 4px;
+    background-color: rgb(203, 203, 192,0.7);
+    margin: 0 auto;
+}
+
+.password-strength-bar::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 20%;
+    border-radius: inherit;
+    background-color: rgb(203, 0, 0);
+    transition: width 0.3s ease;
+}
+
+.password-strength-bar#weak::before{
+    width: 20%;
+    background-color: rgb(203, 0, 0);
+}
+
+.password-strength-bar#medium::before{
+    width: 60%;
+    background-color: rgb(237, 237, 0);
+}
+
+.password-strength-bar#strong::before{
+    width: 100%;
+    background-color: rgb(81, 135, 244);
+}
+
+.input-password-box{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px auto;
+    font-size: 1.05rem;
+}
+
+.password-range{
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+}
+
+.password-setting{
+    width: 90%;
+    margin: 20px auto;
+}
+
+.checkbox-main{
+    width: 90%;
+    display: flex;
+    margin: 0 auto 10px;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.checkbox-main input{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.checkbox-main label{
+    font-size: 1.2rem;
+    margin-left: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.generate-password{
+    width: 90%;
+    display: block;
+    margin: 20px auto;
+    padding: 15px;
+    border: none;
+    background-color: rgb(81, 135, 244);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    color: white;
+    opacity: 0.7;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.generate-password:hover{
+    opacity: 1;
+}
+
+@media (max-width: 600px){
+    .main-container{
+        width: 95%;
+    }
+
+    .input-box input{
+        width: 90%;
+    }
+
+    .input-box span{
+        right: 12%;
+    }
+
+    .lower-case{
+        pointer-events: none;
+    }
+}
